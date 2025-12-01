@@ -1,0 +1,23 @@
+{
+  "common": {
+    "home": "首页",
+    "categories": "分类",
+    "products": "产品",
+    "bestSellers": "畅销品",
+    "newArrivals": "新品",
+    "companyStrength": "公司实力",
+    "language": "语言"
+  },
+  "categories": {
+    "belts": "腰带",
+    "necklaces": "项链",
+    "bracelets": "手链"
+  },
+  "product": {
+    "sku": "产品编号",
+    "priceRange": "价格区间",
+    "moq": "最小起订量",
+    "description": "描述",
+    "images": "产品图片"
+  }
+}

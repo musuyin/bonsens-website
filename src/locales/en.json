@@ -1,0 +1,23 @@
+{
+  "common": {
+    "home": "Home",
+    "categories": "Categories",
+    "products": "Products",
+    "bestSellers": "Best Sellers",
+    "newArrivals": "New Arrivals",
+    "companyStrength": "Company Strength",
+    "language": "Language"
+  },
+  "categories": {
+    "belts": "Belts",
+    "necklaces": "Necklaces",
+    "bracelets": "Bracelets"
+  },
+  "product": {
+    "sku": "SKU",
+    "priceRange": "Price Range",
+    "moq": "Minimum Order Quantity",
+    "description": "Description",
+    "images": "Product Images"
+  }
+}

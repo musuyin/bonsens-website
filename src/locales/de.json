@@ -1,0 +1,23 @@
+{
+  "common": {
+    "home": "Startseite",
+    "categories": "Kategorien",
+    "products": "Produkte",
+    "bestSellers": "Bestseller",
+    "newArrivals": "Neuheiten",
+    "companyStrength": "Unternehmensstärke",
+    "language": "Sprache"
+  },
+  "categories": {
+    "belts": "Gürtel",
+    "necklaces": "Halsketten",
+    "bracelets": "Armbänder"
+  },
+  "product": {
+    "sku": "Artikelnummer",
+    "priceRange": "Preisspanne",
+    "moq": "Mindestbestellmenge",
+    "description": "Beschreibung",
+    "images": "Produktbilder"
+  }
+}
