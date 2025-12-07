@@ -16,7 +16,7 @@ const newArrivals = computed(() => {
   return PRODUCTS.filter(product => product.isNewArrival);
 });
 </script>
-
+<!--TODO美化-->
 <template>
   <div class="home">
     <!-- 响应式 Banner 区域 -->
@@ -76,6 +76,8 @@ const newArrivals = computed(() => {
   width: 100vw;
   max-width: 100vw;
   margin-left: calc(-50vw + 50%);
+  position: relative;
+  z-index: 0;
 }
 
 .featured-products,

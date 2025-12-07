@@ -21,10 +21,13 @@ import Footer from '@/components/Footer.vue';
   flex-direction: column;
   width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 main {
   flex: 1;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 </style>

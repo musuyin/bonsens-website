@@ -1,5 +1,4 @@
 <script setup lang="ts">
-//import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 
@@ -20,7 +19,11 @@ const navigateTo = (path: string) => {
     <div class="header-content">
       <h1 class="logo" @click="navigateTo('/')">
         <img src="/logo/logo.jpg" alt="BONSENS Logo" class="logo-image" />
+        <span class="logo-text">BONSENS</span>
       </h1>
+
+
+      <div class="spacer"></div>
 
       <nav class="navigation">
         <ul>
@@ -34,7 +37,7 @@ const navigateTo = (path: string) => {
       <div class="language-switcher">
         <select v-model="locale" @change="switchLanguage(locale)">
           <option v-for="lang in availableLocales" :key="lang" :value="lang">
-            {{ $t('common.language') }}: {{ lang.toUpperCase() }}
+            {{ lang.toUpperCase() }}
           </option>
         </select>
       </div>
@@ -45,7 +48,7 @@ const navigateTo = (path: string) => {
 <style scoped>
 .site-header {
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -56,10 +59,10 @@ const navigateTo = (path: string) => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.25rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
+  width: 95%;
   box-sizing: border-box;
 }
 
@@ -70,11 +73,19 @@ const navigateTo = (path: string) => {
   color: #333;
   white-space: nowrap;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .logo-image {
-  height: 80px;
+  height: 40px;
   width: auto;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .spacer {
@@ -84,7 +95,7 @@ const navigateTo = (path: string) => {
 .navigation ul {
   display: flex;
   list-style: none;
-  gap: 1rem;
+  gap: 0.6rem;
   margin: 0;
   padding: 0;
 }
@@ -93,10 +104,11 @@ const navigateTo = (path: string) => {
   cursor: pointer;
   color: #333;
   text-decoration: none;
-  padding: 0.5rem;
-  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
   transition: background-color 0.3s;
   white-space: nowrap;
+  font-size: 0.85rem;
 }
 
 .nav-link:hover {
@@ -104,37 +116,42 @@ const navigateTo = (path: string) => {
 }
 
 .language-switcher select {
-  padding: 0.5rem;
-  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
   border: 1px solid #ddd;
   white-space: nowrap;
+  font-size: 0.85rem;
 }
 
 /* 移动端适配 */
 @media (max-width: 768px) {
   .header-content {
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 0.5rem;
     flex-wrap: nowrap;
   }
 
   .logo-image {
-    height: 40px;
+    height: 30px;
+  }
+
+  .logo-text {
+    font-size: 1rem;
   }
 
   .navigation ul {
     flex-wrap: nowrap;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.2rem;
   }
 
   .nav-link {
-    padding: 0.25rem;
-    font-size: 0.9rem;
+    padding: 0.15rem 0.25rem;
+    font-size: 0.75rem;
   }
 
   .language-switcher select {
-    padding: 0.2rem;
-    font-size: 0.7rem;
+    padding: 0.15rem 0.25rem;
+    font-size: 0.75rem;
   }
 
   .language-switcher {

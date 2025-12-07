@@ -313,27 +313,25 @@ const goToSlide = (index: number) => {
   background: white;
 }
 
-/* 桌面端大横幅样式 */
-@media (min-width: 768px) {
-  .banner-image,
-  .banner-video {
-    aspect-ratio: 16/9; /* 桌面端推荐比例 */
-    object-fit: cover;
-    max-height: 80vh;
-  }
-}
-
 /* 移动端竖屏样式 */
 @media (max-width: 767px) {
   .banner-container {
     width: 100vw;
     max-width: 100vw;
-    margin-left: calc(-50vw + 50%);
   }
 
   .banner-image,
   .banner-video {
     aspect-ratio: 3/4; /* 移动端推荐比例 */
+    object-fit: cover;
+    max-height: 80vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner-image,
+  .banner-video {
+    aspect-ratio: 16/9; /* 桌面端推荐比例 */
     object-fit: cover;
     max-height: 80vh;
   }
