@@ -110,15 +110,15 @@ interface BannerItem {
 const bannerItems = ref<BannerItem[]>([
   {
     type: 'video',
-    desktopVideo: '/banners/desktop/hero.mp4',
-    mobileVideo: '/banners/mobile/hero.mp4'
+    desktopVideo: 'src/assets/banners/desktop/hero.mp4',
+    mobileVideo: 'src/assets/banners/mobile/hero.mp4'
   },
   {
     type: 'image',
-    desktopImage: '/banners/desktop/hero-1.jpg',
-    mobileImage: '/banners/mobile/hero-1.jpg',
-    desktopWebp: '/banners/desktop/hero-1.webp',
-    mobileWebp: '/banners/mobile/hero-1.webp',
+    desktopImage: 'src/assets/banners/desktop/hero-1.jpg',
+    mobileImage: 'src/assets/banners/mobile/hero-1.jpg',
+    desktopWebp: 'src/assets/banners/desktop/hero-1.webp',
+    mobileWebp: 'src/assets/banners/mobile/hero-1.webp',
     alt: 'Hero Banner 1'
   }
 ]);

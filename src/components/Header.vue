@@ -18,7 +18,7 @@ const navigateTo = (path: string) => {
   <header class="site-header">
     <div class="header-content">
       <h1 class="logo" @click="navigateTo('/')">
-        <img src="/logo/logo.jpg" alt="BONSENS Logo" class="logo-image" />
+        <img src="./../assets/logo/logo.jpg" alt="BONSENS Logo" class="logo-image" />
         <span class="logo-text">BONSENS</span>
       </h1>
 

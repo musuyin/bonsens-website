@@ -24,7 +24,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/bonsens-website/'),
   routes,
   scrollBehavior() {
     // 总是滚动到页面顶部

@@ -1,4 +1,4 @@
-import type { Product } from '@/types/product';
+import type { Product } from 'src/types/product';
 
 export const PRODUCTS: Product[] = [
   {
@@ -16,7 +16,7 @@ export const PRODUCTS: Product[] = [
     priceRange: [200, 300],
     moq: 30,
     images: [
-      '/products/necklaces/diamond-pendant-1.webp'
+      'src/assets/products/necklaces/diamond-pendant-1.webp'
     ],
     isNewArrival: true,
     isBestSeller: false
@@ -36,7 +36,7 @@ export const PRODUCTS: Product[] = [
     priceRange: [150, 250],
     moq: 20,
     images: [
-      '/products/bracelets/gold-bracelet-1.webp',
+      'src/assets/products/bracelets/gold-bracelet-1.webp',
     ],
     isNewArrival: false,
     isBestSeller: true
@@ -56,7 +56,7 @@ export const PRODUCTS: Product[] = [
     priceRange: [100, 180],
     moq: 50,
     images: [
-      '/products/belts/belt-1.webp',
+      'src/assets/products/belts/belt-1.webp',
     ],
     isNewArrival: true,
     isBestSeller: true
