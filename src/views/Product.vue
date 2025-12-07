@@ -1,33 +1,37 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue';
-import { useRoute } from 'vue-router';
+import {  computed, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { PRODUCTS } from '@/data/products';
-import type { Product } from '@/types/product';
 
 const route = useRoute();
+const router = useRouter();
 const { locale } = useI18n();
 
 // 查找产品
-const productId = route.params.id as string;
-const product = ref<Product | null>(null);
+const product = computed(() => {
+  const productId = route.params.id as string;
+  return PRODUCTS.find(p => p.id === productId);
+});
 
-// 安全查找（避免未定义）
-const found = PRODUCTS.find(p => p.id === productId);
-if (found) {
-  product.value = found;
-} else {
-  // 产品未找到
-  console.warn(`Product not found: ${productId}`);
-}
+// 监听路由变化，确保正确更新产品信息
+watch(
+  () => route.params.id,
+  () => {
+    if (!product.value) {
+      // 如果找不到产品，重定向到404页面或者首页
+      // 这里我们暂时显示错误信息
+    }
+  }
+);
 
 // 多语言字段计算
 const productName = computed(() =>
-  product.value ? product.value.name[locale.value] || product.value.name.en : ''
+  product.value ? (product.value.name[locale.value] || product.value.name.en) : ''
 );
 
 const productDescription = computed(() =>
-  product.value ? product.value.description[locale.value] || product.value.description.en : ''
+  product.value ? (product.value.description[locale.value] || product.value.description.en) : ''
 );
 </script>
 
@@ -59,12 +63,15 @@ const productDescription = computed(() =>
   <div class="not-found" v-else>
     <h1>404 - Product Not Found</h1>
     <p>The product you are looking for does not exist.</p>
+    <button @click="router.push('/')">Back to Home</button>
   </div>
 </template>
 
 <style scoped>
 .product-detail {
   padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .product-info {
@@ -84,6 +91,7 @@ const productDescription = computed(() =>
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .product-details {
@@ -92,8 +100,42 @@ const productDescription = computed(() =>
   gap: 1rem;
 }
 
+.product-details p {
+  margin: 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.product-details p:last-child {
+  border-bottom: none;
+}
+
 .not-found {
   padding: 2rem;
   text-align: center;
+}
+
+.not-found button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.not-found button:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .product-info {
+    grid-template-columns: 1fr;
+  }
+
+  .product-detail {
+    padding: 1rem;
+  }
 }
 </style>

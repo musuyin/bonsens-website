@@ -1,19 +1,25 @@
 <script setup lang="ts">
 import type { Product } from '@/types/product';
 import { useI18n } from 'vue-i18n';
+import { useRouter } from 'vue-router';
 
 const props = defineProps<{
   product: Product
 }>();
 
 const { locale } = useI18n();
+const router = useRouter();
 
 const productName = props.product.name[locale.value] || props.product.name.en;
 const productDescription = props.product.description[locale.value] || props.product.description.en;
+
+const goToProduct = () => {
+  router.push(`/product/${props.product.id}`);
+};
 </script>
 
 <template>
-  <div class="product-card">
+  <div class="product-card" @click="goToProduct">
     <div class="product-image">
       <img
         v-if="product.images && product.images.length > 0"
@@ -48,6 +54,7 @@ const productDescription = props.product.description[locale.value] || props.prod
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: white;
+  cursor: pointer;
 }
 
 .product-card:hover {
@@ -64,6 +71,11 @@ const productDescription = props.product.description[locale.value] || props.prod
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
 }
 
 .placeholder-image {

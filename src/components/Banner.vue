@@ -109,25 +109,17 @@ interface BannerItem {
 // Banner 配置项
 const bannerItems = ref<BannerItem[]>([
   {
+    type: 'video',
+    desktopVideo: '/banners/desktop/hero.mp4',
+    mobileVideo: '/banners/mobile/hero.mp4'
+  },
+  {
     type: 'image',
     desktopImage: '/banners/desktop/hero-1.jpg',
     mobileImage: '/banners/mobile/hero-1.jpg',
     desktopWebp: '/banners/desktop/hero-1.webp',
     mobileWebp: '/banners/mobile/hero-1.webp',
     alt: 'Hero Banner 1'
-  },
-  {
-    type: 'image',
-    desktopImage: '/banners/desktop/hero-2.jpg',
-    mobileImage: '/banners/mobile/hero-2.jpg',
-    desktopWebp: '/banners/desktop/hero-2.webp',
-    mobileWebp: '/banners/mobile/hero-2.webp',
-    alt: 'Hero Banner 2'
-  },
-  {
-    type: 'video',
-    desktopVideo: '/banners/desktop/hero.mp4',
-    mobileVideo: '/banners/mobile/hero.mp4'
   }
 ]);
 

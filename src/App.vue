@@ -22,6 +22,7 @@ import Footer from '@/components/Footer.vue';
   width: 100%;
   overflow-x: hidden;
   position: relative;
+  background-color: #f8f9fa; /* 柔和的灰白色背景 */
 }
 
 main {

@@ -16,8 +16,7 @@ export const PRODUCTS: Product[] = [
     priceRange: [200, 300],
     moq: 30,
     images: [
-      '/images/necklaces/diamond-1.jpg',
-      '/images/necklaces/diamond-2.jpg'
+      '/products/necklaces/diamond-pendant-1.webp'
     ],
     isNewArrival: true,
     isBestSeller: false
@@ -37,8 +36,7 @@ export const PRODUCTS: Product[] = [
     priceRange: [150, 250],
     moq: 20,
     images: [
-      '/images/bracelets/gold-1.jpg',
-      '/images/bracelets/gold-2.jpg'
+      '/products/bracelets/gold-bracelet-1.webp',
     ],
     isNewArrival: false,
     isBestSeller: true
@@ -48,18 +46,17 @@ export const PRODUCTS: Product[] = [
     sku: 'BNS-BT-2025-SILVER',
     category: 'belts',
     name: {
-      en: 'Silver Belt',
-      zh: '银腰带'
+      en: 'Leather Belt',
+      zh: '皮革腰带'
     },
     description: {
-      en: 'Stylish silver belt for formal occasions.',
-      zh: '适用于正式场合的时尚银腰带。'
+      en: 'Stylish leather belt for formal occasions.',
+      zh: '适用于正式场合的时尚皮革腰带。'
     },
     priceRange: [100, 180],
     moq: 50,
     images: [
-      '/images/belts/silver-1.jpg',
-      '/images/belts/silver-2.jpg'
+      '/products/belts/belt-1.webp',
     ],
     isNewArrival: true,
     isBestSeller: true
