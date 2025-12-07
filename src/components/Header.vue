@@ -18,7 +18,9 @@ const navigateTo = (path: string) => {
 <template>
   <header class="site-header">
     <div class="header-content">
-      <h1 class="logo" @click="navigateTo('/')">BONSENS</h1>
+      <h1 class="logo" @click="navigateTo('/')">
+        <img src="/logo/logo.jpg" alt="BONSENS Logo" class="logo-image" />
+      </h1>
 
       <nav class="navigation">
         <ul>
@@ -62,11 +64,21 @@ const navigateTo = (path: string) => {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   color: #333;
   white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.logo-image {
+  height: 80px;
+  width: auto;
+}
+
+.spacer {
+  flex-grow: 1;
 }
 
 .navigation ul {
@@ -101,17 +113,32 @@ const navigateTo = (path: string) => {
 /* 移动端适配 */
 @media (max-width: 768px) {
   .header-content {
-    padding: 1rem;
-    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+    flex-wrap: nowrap;
+  }
+
+  .logo-image {
+    height: 40px;
   }
 
   .navigation ul {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  .language-switcher select {
+    padding: 0.2rem;
+    font-size: 0.7rem;
   }
 
   .language-switcher {
-    margin-top: 0.5rem;
+    margin-top: 0;
   }
 }
 </style>
