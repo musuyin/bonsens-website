@@ -126,7 +126,7 @@ const newArrivals = computed(() => {
   font-weight: bold;
 }
 
-/* 移动端适配 */
+/* 移动端适配 - 每行显示两个产品卡片 */
 @media (max-width: 768px) {
   .featured-products,
   .company-strength {
@@ -134,7 +134,7 @@ const newArrivals = computed(() => {
   }
 
   .products-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 

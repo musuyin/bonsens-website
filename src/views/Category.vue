@@ -50,4 +50,16 @@ const categoryName = computed(() => {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
 }
+
+/* 移动端适配 - 每行显示两个产品卡片 */
+@media (max-width: 768px) {
+  .category {
+    padding: 1rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
 </style>
