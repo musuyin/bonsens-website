@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import { ref } from 'vue';
+//import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 
@@ -47,6 +47,7 @@ const navigateTo = (path: string) => {
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;
 }
 
 .header-content {
@@ -56,6 +57,8 @@ const navigateTo = (path: string) => {
   padding: 1rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -63,12 +66,15 @@ const navigateTo = (path: string) => {
   font-weight: bold;
   cursor: pointer;
   color: #333;
+  white-space: nowrap;
 }
 
 .navigation ul {
   display: flex;
   list-style: none;
   gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
@@ -78,6 +84,7 @@ const navigateTo = (path: string) => {
   padding: 0.5rem;
   border-radius: 4px;
   transition: background-color 0.3s;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -88,5 +95,23 @@ const navigateTo = (path: string) => {
   padding: 0.5rem;
   border-radius: 4px;
   border: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .navigation ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .language-switcher {
+    margin-top: 0.5rem;
+  }
 }
 </style>

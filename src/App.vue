@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import {RouterView} from 'vue-router';
+import { RouterView } from 'vue-router';
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 </script>
 
 <template>
   <div id="app">
-    <Header/>
+    <Header />
     <main>
-      <RouterView/>
+      <RouterView />
     </main>
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
@@ -19,9 +19,12 @@ import Footer from '@/components/Footer.vue';
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 main {
   flex: 1;
+  width: 100%;
 }
 </style>

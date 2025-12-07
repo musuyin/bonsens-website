@@ -34,6 +34,7 @@
   color: white;
   padding: 2rem 0 1rem;
   margin-top: auto;
+  width: 100%;
 }
 
 .footer-content {
@@ -43,6 +44,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-section h3,
@@ -55,5 +58,15 @@
   padding-top: 1rem;
   margin-top: 2rem;
   border-top: 1px solid #555;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
 }
 </style>
