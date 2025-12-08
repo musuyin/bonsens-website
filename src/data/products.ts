@@ -1,5 +1,10 @@
 import type { Product } from 'src/types/product';
 
+// 导入所有产品图片
+import necklaceImage1 from '../assets/products/necklaces/diamond-pendant-1.webp';
+import braceletImage1 from '../assets/products/bracelets/gold-bracelet-1.webp';
+import beltImage1 from '../assets/products/belts/belt-1.webp';
+
 export const PRODUCTS: Product[] = [
   {
     id: 'necklace-001',
@@ -16,7 +21,7 @@ export const PRODUCTS: Product[] = [
     priceRange: [200, 300],
     moq: 30,
     images: [
-      'src/assets/products/necklaces/diamond-pendant-1.webp'
+      necklaceImage1
     ],
     isNewArrival: true,
     isBestSeller: false
@@ -36,7 +41,7 @@ export const PRODUCTS: Product[] = [
     priceRange: [150, 250],
     moq: 20,
     images: [
-      'src/assets/products/bracelets/gold-bracelet-1.webp',
+      braceletImage1,
     ],
     isNewArrival: false,
     isBestSeller: true
@@ -56,7 +61,7 @@ export const PRODUCTS: Product[] = [
     priceRange: [100, 180],
     moq: 50,
     images: [
-      'src/assets/products/belts/belt-1.webp',
+      beltImage1,
     ],
     isNewArrival: true,
     isBestSeller: true
