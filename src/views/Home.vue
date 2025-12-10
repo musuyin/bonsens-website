@@ -2,6 +2,7 @@
 import Banner from '@/components/Banner.vue';
 import ProductCard from '@/components/ProductCard.vue';
 import FeaturedProductShowcase from '@/components/FeaturedProductShowcase.vue';
+import Divider from '@/components/Divider.vue';
 import {useI18n} from 'vue-i18n';
 import {PRODUCTS} from '@/data/products';
 import {computed} from 'vue';
@@ -38,6 +39,7 @@ const newArrivals = computed(() => {
       </div>
     </section>
 
+
     <section class="featured-products">
       <h2>{{ t('common.newArrivals') }}</h2>
       <div class="products-grid">
@@ -49,8 +51,13 @@ const newArrivals = computed(() => {
       </div>
     </section>
 
+    <Divider />
+
     <!-- 特色商品展示区 -->
     <FeaturedProductShowcase product-id="necklace-001"/>
+
+    <Divider />
+
   </div>
 </template>
 
