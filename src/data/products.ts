@@ -18,6 +18,20 @@ export const PRODUCTS: Product[] = [
       en: 'Elegant 18K gold with natural diamond.',
       zh: '18K金镶嵌天然钻石，优雅经典。'
     },
+    features: {
+      en: [
+        'Natural diamonds with exceptional clarity',
+        '18K gold setting for durability',
+        'Handcrafted by master artisans',
+        'Lifetime warranty on all pieces'
+      ],
+      zh: [
+        '天然钻石，净度卓越',
+        '18K金镶嵌，坚固耐用',
+        '大师级工匠手工打造',
+        '所有产品终身保修'
+      ]
+    },
     priceRange: [200, 300],
     moq: 30,
     images: [

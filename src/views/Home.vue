@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import Banner from '@/components/Banner.vue';
 import ProductCard from '@/components/ProductCard.vue';
-import { useI18n } from 'vue-i18n';
-import { PRODUCTS } from '@/data/products';
-import { computed } from 'vue';
+import FeaturedProductShowcase from '@/components/FeaturedProductShowcase.vue';
+import {useI18n} from 'vue-i18n';
+import {PRODUCTS} from '@/data/products';
+import {computed} from 'vue';
 
-const { t } = useI18n();
+const {t} = useI18n();
 
 // 获取畅销产品和新品
 const bestSellers = computed(() => {
@@ -16,22 +17,23 @@ const newArrivals = computed(() => {
   return PRODUCTS.filter(product => product.isNewArrival);
 });
 </script>
-<!--TODO美化-->
+
 <template>
   <div class="home">
     <!-- 响应式 Banner 区域 -->
     <div class="banner-section">
-      <Banner />
+      <Banner/>
     </div>
+
 
     <!-- 主打系列产品入口 -->
     <section class="featured-products">
       <h2>{{ t('common.bestSellers') }}</h2>
       <div class="products-grid">
         <ProductCard
-          v-for="product in bestSellers"
-          :key="product.id"
-          :product="product"
+            v-for="product in bestSellers"
+            :key="product.id"
+            :product="product"
         />
       </div>
     </section>
@@ -40,29 +42,15 @@ const newArrivals = computed(() => {
       <h2>{{ t('common.newArrivals') }}</h2>
       <div class="products-grid">
         <ProductCard
-          v-for="product in newArrivals"
-          :key="product.id"
-          :product="product"
+            v-for="product in newArrivals"
+            :key="product.id"
+            :product="product"
         />
       </div>
     </section>
 
-    <!-- 公司实力展示 -->
-    <section class="company-strength">
-      <h2>{{ t('common.companyStrength') }}</h2>
-      <div class="strength-gallery">
-        <!-- 这里放置公司实力相关的静态图片 -->
-        <div class="strength-item">
-          <div class="placeholder-image">工厂展示</div>
-        </div>
-        <div class="strength-item">
-          <div class="placeholder-image">仓储能力</div>
-        </div>
-        <div class="strength-item">
-          <div class="placeholder-image">展会参与</div>
-        </div>
-      </div>
-    </section>
+    <!-- 特色商品展示区 -->
+    <FeaturedProductShowcase product-id="necklace-001"/>
   </div>
 </template>
 
@@ -80,8 +68,7 @@ const newArrivals = computed(() => {
   z-index: 0;
 }
 
-.featured-products,
-.company-strength {
+.featured-products {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -89,8 +76,7 @@ const newArrivals = computed(() => {
   box-sizing: border-box;
 }
 
-.featured-products h2,
-.company-strength h2 {
+.featured-products h2 {
   margin-bottom: 1rem;
   text-align: center;
   font-size: 1.8rem;
@@ -104,32 +90,10 @@ const newArrivals = computed(() => {
   margin-top: 1rem;
 }
 
-.strength-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 1rem;
-}
-
-.strength-item {
-  text-align: center;
-}
-
-.placeholder-image {
-  background-color: #f0f0f0;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  color: #666;
-  font-weight: bold;
-}
 
 /* 移动端适配 - 每行显示两个产品卡片 */
 @media (max-width: 768px) {
-  .featured-products,
-  .company-strength {
+  .featured-products {
     padding: 1rem;
   }
 
@@ -138,9 +102,5 @@ const newArrivals = computed(() => {
     gap: 1rem;
   }
 
-  .strength-gallery {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
 }
 </style>

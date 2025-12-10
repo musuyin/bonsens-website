@@ -6,7 +6,9 @@
     "bestSellers": "畅销品",
     "newArrivals": "新品",
     "companyStrength": "公司实力",
-    "language": "语言"
+    "language": "语言",
+    "featured": "特色商品",
+    "treasure": "发现我们的珍宝"
   },
   "categories": {
     "belts": "腰带",
@@ -18,6 +20,8 @@
     "priceRange": "价格区间",
     "moq": "最小起订量",
     "description": "描述",
-    "images": "产品图片"
+    "images": "产品图片",
+    "viewDetails": "查看详情",
+    "pcs": "件"
   }
 }

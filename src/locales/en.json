@@ -6,7 +6,9 @@
     "bestSellers": "Best Sellers",
     "newArrivals": "New Arrivals",
     "companyStrength": "Company Strength",
-    "language": "Language"
+    "language": "Language",
+    "featured": "FEATURED",
+    "treasure": "Discover Our Treasures"
   },
   "categories": {
     "belts": "Belts",
@@ -18,6 +20,8 @@
     "priceRange": "Price Range",
     "moq": "Minimum Order Quantity",
     "description": "Description",
-    "images": "Product Images"
+    "images": "Product Images",
+    "viewDetails": "View Details",
+    "pcs": "pieces"
   }
 }

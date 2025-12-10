@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Product } from '@/types/product';
+import type { Product } from '@/data/products';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 
