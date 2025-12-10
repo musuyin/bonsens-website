@@ -3,6 +3,7 @@ import Banner from '@/components/Banner.vue';
 import ProductCard from '@/components/ProductCard.vue';
 import FeaturedProductShowcase from '@/components/FeaturedProductShowcase.vue';
 import Divider from '@/components/Divider.vue';
+import CategorySection from '@/components/CategorySection.vue';
 import {useI18n} from 'vue-i18n';
 import {PRODUCTS} from '@/data/products';
 import {computed} from 'vue';
@@ -26,7 +27,6 @@ const newArrivals = computed(() => {
       <Banner/>
     </div>
 
-
     <!-- 主打系列产品入口 -->
     <section class="featured-products">
       <h2>{{ t('common.bestSellers') }}</h2>
@@ -38,7 +38,6 @@ const newArrivals = computed(() => {
         />
       </div>
     </section>
-
 
     <section class="featured-products">
       <h2>{{ t('common.newArrivals') }}</h2>
@@ -57,6 +56,12 @@ const newArrivals = computed(() => {
     <FeaturedProductShowcase product-id="necklace-001"/>
 
     <Divider />
+
+    <!-- 商品分类导航区域 -->
+    <CategorySection />
+
+    <Divider />
+
 
   </div>
 </template>

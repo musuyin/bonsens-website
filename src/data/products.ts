@@ -33,7 +33,6 @@ export const PRODUCTS: Product[] = [
       ]
     },
     priceRange: [200, 300],
-    moq: 30,
     images: [
       necklaceImage1
     ],
@@ -53,7 +52,6 @@ export const PRODUCTS: Product[] = [
       zh: '精美的18K金手链，工艺复杂。'
     },
     priceRange: [150, 250],
-    moq: 20,
     images: [
       braceletImage1,
     ],
@@ -73,7 +71,6 @@ export const PRODUCTS: Product[] = [
       zh: '适用于正式场合的时尚皮革腰带。'
     },
     priceRange: [100, 180],
-    moq: 50,
     images: [
       beltImage1,
     ],

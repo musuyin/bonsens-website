@@ -18,7 +18,6 @@
   "product": {
     "sku": "产品编号",
     "priceRange": "价格区间",
-    "moq": "最小起订量",
     "description": "描述",
     "images": "产品图片",
     "viewDetails": "查看详情",

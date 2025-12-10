@@ -54,7 +54,6 @@ const productDescription = computed(() =>
       <div class="product-details">
         <p><strong>{{ $t('product.sku') }}:</strong> {{ product.sku }}</p>
         <p><strong>{{ $t('product.priceRange') }}:</strong> ${{ product.priceRange[0] }} - ${{ product.priceRange[1] }}</p>
-        <p><strong>{{ $t('product.moq') }}:</strong> {{ product.moq }}</p>
         <p><strong>{{ $t('product.description') }}:</strong> {{ productDescription }}</p>
       </div>
     </div>

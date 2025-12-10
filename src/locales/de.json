@@ -18,7 +18,6 @@
   "product": {
     "sku": "Artikelnummer",
     "priceRange": "Preisspanne",
-    "moq": "Mindestbestellmenge",
     "description": "Beschreibung",
     "images": "Produktbilder",
     "viewDetails": "Details anzeigen",

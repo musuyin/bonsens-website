@@ -35,7 +35,6 @@ const goToProduct = () => {
 
       <div class="product-meta">
         <span class="price-range">${{ product.priceRange[0] }} - ${{ product.priceRange[1] }}</span>
-        <span class="moq">MOQ: {{ product.moq }}</span>
       </div>
 
       <div class="product-tags">
@@ -114,10 +113,6 @@ const goToProduct = () => {
 .price-range {
   font-weight: bold;
   color: #e74c3c;
-}
-
-.moq {
-  color: #7f8c8d;
 }
 
 .product-tags {
